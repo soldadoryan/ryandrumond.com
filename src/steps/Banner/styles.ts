@@ -4,7 +4,7 @@ import { TContent } from '../../components/Structure';
 
 
 export const Container = styled.div`
-  background: url('/images/bgteste.jpg');
+  background: url('/images/bg.webp');
   background-size: cover;
   filter: blur(100%);
   background-position: center;

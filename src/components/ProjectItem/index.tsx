@@ -11,7 +11,14 @@ const ProjectItem: React.FC<Props> = ({ data }) => {
   return (
     <S.Shadow>
       <S.Container>
-        <S.Image src={data.image} width="125" height="125" />
+        <S.Image
+          src={data.image}
+          width="125"
+          height="125"
+          loading="lazy"
+          alt={data.alt}
+          title={data.title}
+        />
         <S.WrapInfo>
           <S.Title>{data.title}</S.Title>
           <S.Subtitle>{data.subtitle}</S.Subtitle>

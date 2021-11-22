@@ -36,7 +36,14 @@ const About: React.FC<Props> = ({ animation, setContent }) => {
     <S.Container animation={animation}>
       <Navigation buttons={buttons} theme="lighter" />
       <S.ProfileImageWrap>
-        <S.ProfileImage src="/images/me.jpeg" width="500" height="666" />
+        <S.ProfileImage
+          src="/images/me.webp"
+          width="500"
+          height="666"
+          loading="lazy"
+          alt="Imagem Ryan Drumond"
+          title="Ryan Drumond"
+        />
       </S.ProfileImageWrap>
       <S.Description>
         <S.Title>Ryan Drumond</S.Title>

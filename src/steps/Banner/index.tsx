@@ -11,7 +11,14 @@ const Banner: React.FC<Props> = ({ setContent }) => {
   return (
     <S.Container>
       <S.Filter>
-        <S.Logo src="/images/logo.png" alt="" title="" width={400} height={200} />
+        <S.Logo
+          src="/images/logo.webp"
+          alt="Logo Ryan Drumond"
+          title="Ryan desenvolvedor"
+          width={400}
+          height={200}
+          loading="lazy"
+        />
         <S.LogoDescription>
           Desenvolvedor Front-End / Mobile
         </S.LogoDescription>
