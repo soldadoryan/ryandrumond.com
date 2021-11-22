@@ -16,7 +16,7 @@ const Banner: React.FC<Props> = ({ setContent }) => {
           alt="Logo Ryan Drumond"
           title="Ryan desenvolvedor"
           width={400}
-          height={200}
+          height={210}
           loading="lazy"
         />
         <S.LogoDescription>
