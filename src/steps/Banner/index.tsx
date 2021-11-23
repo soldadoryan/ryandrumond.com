@@ -15,8 +15,8 @@ const Banner: React.FC<Props> = ({ setContent }) => {
           src="/images/logo.webp"
           alt="Logo Ryan Drumond"
           title="Ryan desenvolvedor"
-          width={400}
-          height={210}
+          width={300}
+          height={157}
           loading="lazy"
         />
         <S.LogoDescription>

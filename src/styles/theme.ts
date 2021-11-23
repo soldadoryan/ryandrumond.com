@@ -10,7 +10,7 @@ const theme = {
   font: "'Roboto', sans-serif",
   effects: {
     shadow: '0 .5rem 1rem rgba(0,0,0,.15)',
-    gradient: 'linear-gradient(to bottom right, rgba(24, 188, 238, 0.9), rgba(0, 0, 0, 0.9))',
+    gradient: 'linear-gradient(to bottom right, rgba(24, 188, 238, 0.8), rgba(0, 0, 0, 0.9))',
     grayscale: 'grayscale(100%)',
   }
 }

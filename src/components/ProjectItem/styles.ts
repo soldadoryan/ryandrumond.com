@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components';
 import image from 'next/image';
+import { darken } from 'polished';
 
 export const Shadow = styled.div`
   ${({ theme }) => css`
@@ -13,6 +14,14 @@ export const Shadow = styled.div`
     align-items: center;
     margin: 15px 0;
     padding: 5px;
+
+    @media (max-width: 1600px) {
+      margin: 10px 0;
+    }
+
+    @media (max-width: 450px) {
+      margin: 0 0 30px;
+    }
   `};
 `;
 
@@ -28,6 +37,16 @@ export const Container = styled.div`
     justify-content: center;
     align-items: center;
     padding: 20px 40px;
+
+    @media (max-width: 1600px) {
+      padding: 10px 20px;
+    }
+    
+    @media (max-width: 450px) {
+      flex-direction: column;
+      align-items: center;
+      padding: 20px 20px;
+    }
   `};
 `;
 
@@ -43,6 +62,13 @@ export const WrapInfo = styled.div`
   margin-left: 25px;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
+
+  @media (max-width: 450px) {
+    align-items: center;
+    margin-left: 0;
+    margin-top: 30px;
+  }
 `;
 
 export const Title = styled.strong`
@@ -50,6 +76,10 @@ export const Title = styled.strong`
     font-size: 18px;
     text-transform: uppercase;
     color: ${theme.colors.text};
+
+    @media (max-width: 1600px) {
+      font-size: 14px;
+    }
   `};
 `;
 
@@ -59,6 +89,11 @@ export const Subtitle = styled.strong`
     margin-top: 5px;
     text-transform: uppercase;
     color: ${theme.colors.primary};
+
+    @media (max-width: 450px) {
+      text-align: center;
+      font-size: 12px;
+    }
   `};
 `;
 
@@ -67,6 +102,15 @@ export const Description = styled.p`
     margin-top: 10px;
     color: ${theme.colors.muted_text};
     letter-spacing: 1px;
+
+    @media (max-width: 1600px) {
+      font-size: 13px;
+      margin-top: 5px;
+    }
+
+    @media (max-width: 450px) {
+      text-align: center;
+      font-size: 14px;
+    }
   `};
-  
 `;

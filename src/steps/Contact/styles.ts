@@ -54,5 +54,9 @@ export const Title = styled.strong`
   ${({ theme }) => css`
     color: ${theme.colors.shape};
     font-size: 60px;
+
+    @media (max-width: 450px) {
+      font-size: 35px;
+    }
   `};
 `;

@@ -39,18 +39,40 @@ export const Container = styled.div<AnimationProps>`
 
     animation-duration: 1s;
     animation-fill-mode: forwards; 
+
+    @media (max-width: 450px) {
+      flex-direction: column;
+      justify-content: center;
+    }
   `}
 `;
 
 export const ProfileImageWrap = styled.div`
   background-color: ${({ theme }) => theme.colors.shape};
-  padding: 10px 10px 8px;
+  width: 500px;
+  height: 666px;
+  position: relative;
+
+  @media (max-width: 1600px) {
+    width: 375px;
+    height: 500px;
+  }
+
+  @media (max-width: 1024px) {
+    display: none;
+  }
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+
+  @media (max-width: 450px) {
+    display: none;
+  }
 `;
 
 export const ProfileImage = styled(Image)`
   ${({ theme }) => css`
-    width: 100%;
-    height: 100%;
     box-shadow: ${theme.effects.shadow};
     filter: ${theme.effects.grayscale};
   `};
@@ -58,6 +80,30 @@ export const ProfileImage = styled(Image)`
 
 export const Description = styled.div`
   width: 50%;
+  
+  @media (max-width: 1024px) {
+    width: 100%;
+    padding: 0 50px 30px;
+    margin-top: 100px;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+  
+  @media (max-width: 768px) {
+    width: 100%;
+    padding: 0 30px 30px;
+    margin-top: 100px;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  @media (max-width: 450px) {
+    width: 100%;
+    padding: 0 20px 30px;
+    margin-top: 100px;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
 `;
 
 export const Title = styled.h1`
@@ -66,6 +112,25 @@ export const Title = styled.h1`
     font-size: 75px;
     text-transform: uppercase;
     letter-spacing: 2px;
+    
+    @media (max-width: 1600px) {
+      font-size: 45px;
+    }
+
+    @media (max-width: 1024px) {
+      text-align: center;  
+      font-size: 40px;
+    }
+
+    @media (max-width: 768px) {
+      text-align: center;  
+      font-size: 40px;
+    }
+
+    @media (max-width: 450px) {
+      text-align: center;  
+      font-size: 30px;
+    }
   `}
 `;
 
@@ -76,6 +141,26 @@ export const Subtitle = styled.h2`
     text-transform: uppercase;
     letter-spacing: 2px;
     margin-bottom: 50px;
+
+    @media (max-width: 1600px) {
+      font-size: 20px;
+    }
+
+    @media (max-width: 1024px) {
+      font-size: 20px;
+      text-align: center; 
+    }
+
+    @media (max-width: 768px) {
+      font-size: 20px;
+      text-align: center; 
+    }
+
+    @media (max-width: 450px) {
+      font-size: 12px;
+      text-align: center; 
+      letter-spacing: 1px;
+    }
   `}
 `;
 
@@ -94,6 +179,32 @@ export const Paragraph = styled.p`
       &:hover {
         color: ${theme.colors.primary};
       }
+    }
+
+    strong {
+      color: ${theme.colors.shape};
+    }
+
+    @media (max-width: 1600px) {
+      font-size: 16px;
+      line-height: 25px;
+      text-align: justify;
+      margin-bottom: 10px;
+    }
+
+    @media (max-width: 1024px) {
+      font-size: 20px;
+      text-align: justify;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 18px;
+      text-align: justify;
+    }
+
+    @media (max-width: 450px) {
+      font-size: 14px;
+      text-align: justify;
     }
   `}
 `;
@@ -121,6 +232,30 @@ export const WrapActions = styled.ul`
           color: ${theme.colors.primary};
           font-size: 20px;
         }
+      }
+    }
+
+    @media (max-width: 1600px) {
+      margin-right: 0;
+      margin-top: 25px;
+
+      li {
+        margin-bottom: 15px;
+        font-size: 16px;
+        padding: 10px 0;
+      }
+    }
+
+    @media (max-width: 450px) {
+      flex-direction: column;
+      margin-right: 0;
+
+      li {
+        width: 100%;
+        background-color: ${theme.colors.text};
+        margin-bottom: 15px;
+        font-size: 14px;
+        padding: 10px 0;
       }
     }
   `};

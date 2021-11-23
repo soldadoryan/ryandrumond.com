@@ -13,8 +13,8 @@ const ProjectItem: React.FC<Props> = ({ data }) => {
       <S.Container>
         <S.Image
           src={data.image}
-          width="125"
-          height="125"
+          width="100"
+          height="100"
           loading="lazy"
           alt={data.alt}
           title={data.title}

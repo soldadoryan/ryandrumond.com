@@ -4,7 +4,7 @@ const projects = [
     image: '/images/cotemig.webp',
     alt: 'Logo COTEMIG',
     title: 'COTEMIG',
-    subtitle: 'Desenvolvimento aplicativo 2021',
+    subtitle: 'Aplicativo 2021',
     description: 'Desenvolvimento do novo aplicativo do colégio e faculdade COTEMIG para alunos e professores.',
   },
   {
@@ -12,7 +12,7 @@ const projects = [
     image: '/images/task.webp',
     alt: 'Logo Task Internet',
     title: 'Task Internet',
-    subtitle: 'Desenvolvimento Website 2021',
+    subtitle: 'Website 2021',
     description: 'Novo website da Task Internet, empresa líder em hospedagem de sites de Belo Horizonte.',
   },
   {
@@ -29,7 +29,7 @@ const projects = [
     alt: 'Logo Prefeitura de Belo Horizonte',
     title: 'Uai Resolve',
     subtitle: 'Hackathon COTEMIG - SIMI - PRODABEL',
-    description: 'Ideia de aplicativo apresentada durante a participação no Hackathon COTEMIG - SIMI - PRODABEL.',
+    description: 'Protótipo funcional apresentado no Hackathon organizado por COTEMIG, SIMI, PRODABEL.',
   },
 ];
 

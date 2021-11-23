@@ -40,6 +40,7 @@ const About: React.FC<Props> = ({ animation, setContent }) => {
           src="/images/me.webp"
           width="500"
           height="666"
+          layout="fill"
           loading="lazy"
           alt="Imagem Ryan Drumond"
           title="Ryan Drumond"
@@ -49,31 +50,30 @@ const About: React.FC<Props> = ({ animation, setContent }) => {
         <S.Title>Ryan Drumond</S.Title>
         <S.Subtitle>Desenvolvedor Front-End / Mobile</S.Subtitle>
         <S.Paragraph>
-          Trabalho atualmente como desenvolvedor front-end
-          na <Link href="https://ioasys.com.br">
+          Sou mineiro de BH, tenho 23 anos e 10 anos de experiência em desenvolvimento de aplicações.
+          Atualmente, atuo como desenvolvedor front-end na {' '}
+          <Link href="https://ioasys.com.br">
             <a target="_blank">
               ioasys
             </a>
-          </Link> mas possuo experiência
-          de mais de 6 anos em desenvolvimento back-end.
-          Sou estudante de Sistemas de Informação pela Faculdade COTEMIG e
-          possuo especializações em ReactJS, NodeJS e React Native pela Rocketseat.
+          </Link> - empresa brasileira de inovação tecnológica especializada na criação e desenvolvimento de aplicativos e demais componentes do universo digital.
         </S.Paragraph>
         <S.Paragraph>
-          Trabalho atualmente como desenvolvedor front-end
-          na <Link href="https://ioasys.com.br">
-            <a target="_blank">
-              ioasys
-            </a>
-          </Link> mas possuo experiência
-          de mais de 6 anos em desenvolvimento back-end.
-          Sou estudante de Sistemas de Informação pela Faculdade COTEMIG e
-          possuo especializações em ReactJS, NodeJS e React Native pela Rocketseat.
+          Tenho mais de <strong>seis anos</strong> de experiência em desenvolvimento back-end,
+          possuo especialização em ReactJS, NodeJS e React Native pela Rocketseat e,
+          além disso, sou graduando de Sistemas de Informação pela Faculdade Cotemig.
+        </S.Paragraph>
+        <S.Paragraph>
+          Empreendo no setor de tecnologia desde a adolescência e, enquanto estudante de
+          Sistemas de Informação, conquistei <strong>o primeiro lugar no Hackathon COTEMIG -
+            PRODABEL - SIMI</strong>. Como recompensa, ganhei o passaporte para a Campus Party SP,
+          tive o privilégio de conhecer as instalações da Microsoft Brasil e participar
+          de uma reunião com os líderes dessa multinacional.
         </S.Paragraph>
         <S.WrapActions>
           <li>
-            <Link href="https://ioasys.com.br">
-              <a>
+            <Link href="/ryan_drumond.pdf">
+              <a target="_blank">
                 <S.WrapIcon>
                   <RiFileDownloadLine />
                 </S.WrapIcon>
@@ -81,7 +81,7 @@ const About: React.FC<Props> = ({ animation, setContent }) => {
               </a>
             </Link>
           </li>
-          <li>
+          {/* <li>
             <Link href="https://github.com/soldadoryan">
               <a target="_blank">
                 <S.WrapIcon>
@@ -90,9 +90,9 @@ const About: React.FC<Props> = ({ animation, setContent }) => {
                 /ryandrumond
               </a>
             </Link>
-          </li>
+          </li> */}
           <li>
-            <Link href="https://ioasys.com.br">
+            <Link href="https://www.linkedin.com/in/ryandrumond/">
               <a target="_blank">
                 <S.WrapIcon>
                   <RiLinkedinLine />

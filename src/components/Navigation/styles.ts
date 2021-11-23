@@ -6,4 +6,10 @@ export const Container = styled.div`
   right: 20px;
   display: flex;
   align-items: center;
+
+  @media (max-width: 450px) {
+    width: 100%;
+    justify-content: center;
+    left: 0;
+  }
 `;

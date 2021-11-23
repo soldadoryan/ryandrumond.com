@@ -14,6 +14,7 @@ export const Container = styled.div`
 
 export const Filter = styled.div`
   background-image: ${({ theme }) => theme.effects.gradient};
+  backdrop-filter: blur(5px);
   width: 100%;
   height: 100%;
   display: flex;
@@ -28,7 +29,13 @@ export const LogoDescription = styled.h2`
   color: ${({ theme }) => theme.colors.shape};
   letter-spacing: 3px;
   font-weight: 700;
-  font-size: 20px;
+  font-size: 16px;
   text-transform: uppercase;
   margin-bottom: 50px;
+  text-align: center;
+
+  @media (max-width: 450px) {
+    font-size: 12px;
+    letter-spacing: 1px;
+  }
 `;
