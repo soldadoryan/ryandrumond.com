@@ -27,9 +27,9 @@ export const Logo = styled(Image)``;
 
 export const LogoDescription = styled.h2`
   color: ${({ theme }) => theme.colors.shape};
-  letter-spacing: 3px;
+  letter-spacing: 1px;
   font-weight: 700;
-  font-size: 16px;
+  font-size: 14px;
   text-transform: uppercase;
   margin-bottom: 50px;
   text-align: center;
