@@ -1,10 +1,10 @@
-import React from 'react';
-import { ProjectDTO } from '../../contents/projects';
-import Link from 'next/link';
-import * as S from './styles';
+import React from "react";
+import { ProjectDTO } from "../../contents/projects";
+import Link from "next/link";
+import * as S from "./styles";
 
 interface Props {
-  data: ProjectDTO
+  data: ProjectDTO;
 }
 
 const ProjectItem: React.FC<Props> = ({ data }) => {
@@ -20,13 +20,13 @@ const ProjectItem: React.FC<Props> = ({ data }) => {
           title={data.title}
         />
         <S.WrapInfo>
-          <S.Title>{data.title}</S.Title>
+          <S.Title dangerouslySetInnerHTML={{ __html: data.title }}></S.Title>
           <S.Subtitle>{data.subtitle}</S.Subtitle>
           <S.Description>{data.description}</S.Description>
         </S.WrapInfo>
       </S.Container>
     </S.Shadow>
   );
-}
+};
 
 export default ProjectItem;

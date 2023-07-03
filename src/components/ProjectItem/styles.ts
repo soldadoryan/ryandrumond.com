@@ -1,6 +1,6 @@
-import styled, { css } from 'styled-components';
-import image from 'next/image';
-import { darken } from 'polished';
+import styled, { css } from "styled-components";
+import image from "next/image";
+import { darken } from "polished";
 
 export const Shadow = styled.div`
   ${({ theme }) => css`
@@ -34,14 +34,14 @@ export const Container = styled.div`
     transform: rotate(0deg);
     box-shadow: ${theme.effects.shadow};
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     padding: 20px 40px;
 
     @media (max-width: 1600px) {
       padding: 10px 20px;
     }
-    
+
     @media (max-width: 450px) {
       flex-direction: column;
       align-items: center;
@@ -52,7 +52,7 @@ export const Container = styled.div`
 
 export const Image = styled(image)`
   ${({ theme }) => css`
-    border-radius: 50%; 
+    border-radius: 50%;
     object-fit: cover;
     object-position: center;
   `};
@@ -77,8 +77,16 @@ export const Title = styled.strong`
     text-transform: uppercase;
     color: ${theme.colors.text};
 
+    & > small {
+      font-size: 14px;
+    }
+
     @media (max-width: 1600px) {
       font-size: 14px;
+
+      & > small {
+        font-size: 12px;
+      }
     }
   `};
 `;

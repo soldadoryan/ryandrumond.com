@@ -1,20 +1,28 @@
-import styled, { css } from 'styled-components';
-import Image from 'next/image';
-import { TContent } from '../../components/Structure';
+import styled, { css } from "styled-components";
+import Image from "next/image";
+import { TContent } from "../../components/Structure";
 
 interface AnimationProps {
-  animation: TContent
+  animation: TContent;
 }
 
 export const Container = styled.div<AnimationProps>`
   @keyframes enterAboutTransition {
-    0% {right: -100%;}
-    100% {right: 0%;}
+    0% {
+      right: -100%;
+    }
+    100% {
+      right: 0%;
+    }
   }
 
   @keyframes exitAboutTransition {
-    0% {right: 0%;}
-    100% {right: -100%;}
+    0% {
+      right: 0%;
+    }
+    100% {
+      right: -100%;
+    }
   }
 
   ${({ theme, animation }) => css`
@@ -29,16 +37,18 @@ export const Container = styled.div<AnimationProps>`
     justify-content: space-around;
     align-items: center;
 
-    ${(animation === 'enter_about' || animation === 'exit_projects') && css`
+    ${(animation === "enter_about" || animation === "exit_projects") &&
+    css`
       animation-name: enterAboutTransition;
     `};
 
-    ${(animation === 'exit_about' || animation === 'enter_projects') && css`
+    ${(animation === "exit_about" || animation === "enter_projects") &&
+    css`
       animation-name: exitAboutTransition;
     `};
 
     animation-duration: 1s;
-    animation-fill-mode: forwards; 
+    animation-fill-mode: forwards;
 
     @media (max-width: 450px) {
       flex-direction: column;
@@ -52,6 +62,8 @@ export const ProfileImageWrap = styled.div`
   width: 500px;
   height: 666px;
   position: relative;
+  border: 10px solid ${({ theme }) => theme.colors.shape};
+  box-shadow: 3px 3px 3px #000;
 
   @media (max-width: 1600px) {
     width: 375px;
@@ -80,7 +92,7 @@ export const ProfileImage = styled(Image)`
 
 export const Description = styled.div`
   width: 50%;
-  
+
   @media (max-width: 1024px) {
     width: 100%;
     padding: 0 50px 30px;
@@ -88,7 +100,7 @@ export const Description = styled.div`
     overflow-x: hidden;
     overflow-y: auto;
   }
-  
+
   @media (max-width: 768px) {
     width: 100%;
     padding: 0 30px 30px;
@@ -112,23 +124,23 @@ export const Title = styled.h1`
     font-size: 75px;
     text-transform: uppercase;
     letter-spacing: 2px;
-    
+
     @media (max-width: 1600px) {
       font-size: 45px;
     }
 
     @media (max-width: 1024px) {
-      text-align: center;  
+      text-align: center;
       font-size: 40px;
     }
 
     @media (max-width: 768px) {
-      text-align: center;  
+      text-align: center;
       font-size: 40px;
     }
 
     @media (max-width: 450px) {
-      text-align: center;  
+      text-align: center;
       font-size: 30px;
     }
   `}
@@ -148,17 +160,17 @@ export const Subtitle = styled.h2`
 
     @media (max-width: 1024px) {
       font-size: 20px;
-      text-align: center; 
+      text-align: center;
     }
 
     @media (max-width: 768px) {
       font-size: 20px;
-      text-align: center; 
+      text-align: center;
     }
 
     @media (max-width: 450px) {
       font-size: 12px;
-      text-align: center; 
+      text-align: center;
       letter-spacing: 1px;
     }
   `}
@@ -221,13 +233,13 @@ export const WrapActions = styled.ul`
       color: ${theme.colors.shape};
       font-weight: 100;
       margin-right: 30px;
-      
+
       a {
         display: flex;
         align-items: center;
         text-decoration: none;
         color: ${theme.colors.shape};
-        
+
         svg {
           color: ${theme.colors.primary};
           font-size: 20px;

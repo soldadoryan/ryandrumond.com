@@ -1,8 +1,8 @@
-import React from 'react';
-import { TContent } from '../../components/Structure';
-import * as S from './styles';
-import Link from 'next/link';
-import Navigation from '../../components/Navigation';
+import React from "react";
+import { TContent } from "../../components/Structure";
+import * as S from "./styles";
+import Link from "next/link";
+import Navigation from "../../components/Navigation";
 
 import {
   RiLinkedinLine,
@@ -10,8 +10,8 @@ import {
   RiYoutubeLine,
   RiFileDownloadLine,
   RiArrowDownLine,
-  RiArrowLeftLine
-} from 'react-icons/ri';
+  RiArrowLeftLine,
+} from "react-icons/ri";
 
 interface Props {
   animation: TContent;
@@ -21,14 +21,18 @@ interface Props {
 const About: React.FC<Props> = ({ animation, setContent }) => {
   const buttons = [
     {
-      id: 'btn_initial',
-      title: (<><RiArrowLeftLine /> Voltar</>),
-      setContent: () => setContent('exit_about'),
+      id: "btn_initial",
+      title: (
+        <>
+          <RiArrowLeftLine /> Voltar
+        </>
+      ),
+      setContent: () => setContent("exit_about"),
     },
     {
-      id: 'btn_projects',
-      title: (<>Meus projetos</>),
-      setContent: () => setContent('enter_projects'),
+      id: "btn_projects",
+      title: <>Meus projetos</>,
+      setContent: () => setContent("enter_projects"),
     },
   ];
 
@@ -50,24 +54,30 @@ const About: React.FC<Props> = ({ animation, setContent }) => {
         <S.Title>Ryan Drumond</S.Title>
         <S.Subtitle>Desenvolvedor Front-End / Mobile</S.Subtitle>
         <S.Paragraph>
-          Sou mineiro de BH, tenho 23 anos e 10 anos de experiência em desenvolvimento de aplicações.
-          Atualmente, atuo como desenvolvedor front-end na {' '}
+          Sou mineiro de BH, tenho 25 anos e 12 anos de experiência em
+          desenvolvimento de aplicações. Atualmente, atuo como desenvolvedor
+          front-end na{"  "}
           <Link href="https://ioasys.com.br">
-            <a target="_blank">
-              ioasys
-            </a>
-          </Link> - empresa brasileira de inovação tecnológica especializada na criação e desenvolvimento de aplicativos e demais componentes do universo digital.
+            <a target="_blank">ioasys</a>
+          </Link>{" "}
+          - empresa brasileira de inovação tecnológica especializada na criação
+          e desenvolvimento de aplicativos e demais componentes do universo
+          digital.
         </S.Paragraph>
         <S.Paragraph>
-          Tenho mais de <strong>seis anos</strong> de experiência em desenvolvimento back-end,
-          possuo especialização em ReactJS, NodeJS e React Native pela Rocketseat e,
-          além disso, sou graduando de Sistemas de Informação pela Faculdade Cotemig.
+          Tenho mais de <strong>oito anos</strong> de experiência em
+          desenvolvimento back-end. Possuo especialização em ReactJS, NodeJS e
+          React Native pela Rocketseat e, além disso, sou graduado em Sistemas
+          de Informação pela Faculdade Cotemig.
         </S.Paragraph>
         <S.Paragraph>
-          Empreendo no setor de tecnologia desde a adolescência e, enquanto estudante de
-          Sistemas de Informação, conquistei <strong>o primeiro lugar no Hackathon COTEMIG -
-            PRODABEL - SIMI</strong>. Como recompensa, ganhei o passaporte para a Campus Party SP,
-          tive o privilégio de conhecer as instalações da Microsoft Brasil e participar
+          Empreendo no setor de tecnologia desde a adolescência e, enquanto
+          estudante de Sistemas de Informação, conquistei{" "}
+          <strong>
+            o primeiro lugar no Hackathon COTEMIG - PRODABEL - SIMI
+          </strong>
+          . Como recompensa, ganhei o passaporte para a Campus Party SP, tive o
+          privilégio de conhecer as instalações da Microsoft Brasil e participar
           de uma reunião com os líderes dessa multinacional.
         </S.Paragraph>
         <S.WrapActions>
@@ -115,6 +125,6 @@ const About: React.FC<Props> = ({ animation, setContent }) => {
       </S.Description>
     </S.Container>
   );
-}
+};
 
 export default About;
